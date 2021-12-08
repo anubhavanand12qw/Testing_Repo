@@ -27,4 +27,12 @@ def add_nums(num1: int, num2: int) -> int:
 
 
 if __name__ == "__main__":
+    print("Start")
     print(add_nums(2, 3))
+    print(add_nums(4, 3))
+    print(add_nums(5, 3))
+    print(add_nums(6, 3))
+    print(add_nums(7, 3))
+    print(add_nums(8, 3))
+    print(add_nums(9, 3))
+    print("End")
