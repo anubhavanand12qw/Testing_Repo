@@ -1,0 +1,40 @@
+name: Pytest
+
+on: 
+  push:
+    branches: [dev]
+  pull_request:
+    branches: [qa]
+  workflow_dispatch:
+
+jobs:
+  pytest:
+
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8.
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Test with pytest
+      env: 
+        # Can Add more Env variables under this comment
+        CLOUDANT_ID: ${{ secrets.CLOUDANT_ID }}
+        CLOUDANT_PASSWORD: ${{ secrets.CLOUDANT_PASSWORD }}
+        CLOUDANT_URL: ${{ secrets.CLOUDANT_URL }}
+      run: |
+        echo "Current Work Directory: $PWD"
+        pytest -v build/ --junitxml=test-results.xml --cov
+        coverage report -m --fail-under=50 --omit=build/test*
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v1
+      if: always()
+      with:
+        files: test-results.xml
