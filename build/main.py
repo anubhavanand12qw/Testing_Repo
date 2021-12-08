@@ -6,9 +6,9 @@ Created on Wed Dec  8 14:01:12 2021
 """
 
 
-def add_nums(num1: float, num2: float) -> int:
+def add_nums(num1: float, num2: float):
     """
-    Function to add numbers.
+    Function to add two numbers.
 
     Parameters
     ----------
@@ -19,14 +19,14 @@ def add_nums(num1: float, num2: float) -> int:
 
     Returns
     -------
-    int
-        Sum of both the numbers.
+
+    Sum of two number. In-case of error "Invalid Input"
 
     """
     if isinstance(num1, (int, float)) & isinstance(num2, (int, float)):
         result = num1 + num2
         return result
-    return TypeError("Invalid Input")
+    return "Invalid Input"
 
 
 def main():

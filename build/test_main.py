@@ -25,13 +25,12 @@ class TestMain(unittest.TestCase):
         #### Sum of positive numbers
         result = main.add_nums(10, 20)
         self.assertEqual(result, 30)
-        
+
         result = main.add_nums("2", 20)
         self.assertEqual(result, "Invalid Input")
-        
+
         result = main.add_nums("2", "2")
         self.assertEqual(result, "Invalid Input")
-        
+
 if __name__ == "__main__":
     unittest.main()
-        
