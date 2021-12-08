@@ -26,34 +26,41 @@ def add_nums(num1: int, num2: int) -> int:
     return num1 + num2
 
 
-if __name__ == "__main__":
-    print("Start")
-    try:
-        print(add_nums(2, 3))
-    except Exception as excp:
-        print(excp)
-    try:
-        print(add_nums(2, 3))
-    except Exception as excp:
-        print(excp)
-    try:
-        print(add_nums(2, 3))
-    except Exception as excp:
-        print(excp)
-    try:
-        print(add_nums(2, 3))
-    except Exception as excp:
-        print(excp)
-    try:
-        print(add_nums(2, 3))
-    except Exception as excp:
-        print(excp)
-    try:
-        print(add_nums(2, 3))
-    except Exception as excp:
-        print(excp)
-    try:
-        print(add_nums(2, 3))
-    except Exception as excp:
-        print(excp)
-    print("End")
+# if __name__ == "__main__":
+print("Start")
+try:
+    print(add_nums(2, 3))
+    print(add_nums("2", 3))
+except Exception as excp:
+    print(excp)
+try:
+    print(add_nums(2, 3))
+    print(add_nums("2", 3))
+except Exception as excp:
+    print(excp)
+try:
+    print(add_nums(2, 3))
+    print(add_nums("2", 3))
+except Exception as excp:
+    print(excp)
+try:
+    print(add_nums(2, 3))
+    print(add_nums("2", 3))
+except Exception as excp:
+    print(excp)
+try:
+    print(add_nums(2, 3))
+    print(add_nums("2", 3))
+except Exception as excp:
+    print(excp)
+try:
+    print(add_nums(2, 3))
+    print(add_nums("2", 3))
+except Exception as excp:
+    print(excp)
+try:
+    print(add_nums(2, 3))
+    print(add_nums("2", 3))
+except Exception as excp:
+    print(excp)
+print("End")
