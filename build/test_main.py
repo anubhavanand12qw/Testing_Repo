@@ -26,3 +26,6 @@ class TestMain(unittest.TestCase):
         result = main.add_nums(10, 20)
         self.assertEqual(result, 30)
         
+if __name__ == "__main__":
+    unittest.main()
+        
