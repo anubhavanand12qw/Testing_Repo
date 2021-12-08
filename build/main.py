@@ -6,7 +6,7 @@ Created on Wed Dec  8 14:01:12 2021
 """
 
 
-def add_nums(num1: int, num2: int) -> int:
+def add_nums(num1: float, num2: float) -> int:
     """
     Function to add numbers.
 
@@ -23,44 +23,26 @@ def add_nums(num1: int, num2: int) -> int:
         Sum of both the numbers.
 
     """
-    return num1 + num2
+    if isinstance(num1, (int, float)) & isinstance(num2, (int, float)):
+        result = num1 + num2
+        return result
+    return TypeError("Invalid Input")
 
 
-# if __name__ == "__main__":
-print("Start")
-try:
-    print(add_nums(2, 3))
-    print(add_nums("2", 3))
-except Exception as excp:
-    print(excp)
-try:
-    print(add_nums(2, 3))
-    print(add_nums("2", 3))
-except Exception as excp:
-    print(excp)
-try:
-    print(add_nums(2, 3))
-    print(add_nums("2", 3))
-except Exception as excp:
-    print(excp)
-try:
-    print(add_nums(2, 3))
-    print(add_nums("2", 3))
-except Exception as excp:
-    print(excp)
-try:
-    print(add_nums(2, 3))
-    print(add_nums("2", 3))
-except Exception as excp:
-    print(excp)
-try:
-    print(add_nums(2, 3))
-    print(add_nums("2", 3))
-except Exception as excp:
-    print(excp)
-try:
-    print(add_nums(2, 3))
-    print(add_nums("2", 3))
-except Exception as excp:
-    print(excp)
-print("End")
+def main():
+    """
+    Main function
+
+    Returns
+    -------
+    None
+
+    """
+    try:
+        print(add_nums(0, 0))
+    except TypeError as excp:
+        print(excp)
+
+
+if __name__ == "__main__":
+    main()
