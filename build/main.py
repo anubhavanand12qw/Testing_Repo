@@ -5,28 +5,8 @@ Created on Wed Dec  8 14:01:12 2021
 @author: aanand2
 """
 
-
-def add_nums(num1: float, num2: float):
-    """
-    Function to add two numbers.
-
-    Parameters
-    ----------
-    num1 : int
-        First number.
-    num2 : int
-        Second Nnumber.
-
-    Returns
-    -------
-
-    Sum of two number. In-case of error "Invalid Input"
-
-    """
-    if isinstance(num1, (int, float)) & isinstance(num2, (int, float)):
-        result = num1 + num2
-        return result
-    return "Invalid Input"
+import addition
+import subtraction
 
 
 def main():
@@ -39,7 +19,10 @@ def main():
 
     """
     try:
-        print(add_nums(0, 0))
+        print(addition.add_nums(0, 0))
+        print(addition.mul_nums(34, 54))
+        print(addition.div_nums(34, 54))
+        print(subtraction.sub_nums(0, 0))
     except TypeError as excp:
         print(excp)
 
